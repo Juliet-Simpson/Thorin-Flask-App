@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template
 
 
@@ -12,7 +13,7 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", page_title="About", list_of_numbers=[1, 2, 3])
+    return render_template("about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
